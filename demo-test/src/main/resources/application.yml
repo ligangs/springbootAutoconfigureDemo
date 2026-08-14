@@ -1,0 +1,3 @@
+demo:
+  hello:
+    msg: 来自yml配置的消息
