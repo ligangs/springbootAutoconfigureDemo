@@ -2,16 +2,16 @@ package com.demo.autoconfigure;
 
 import com.demo.properties.HelloProperties;
 import com.demo.service.HelloService;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 自定义自动配置类
  */
-@Configuration(proxyBeanMethods = false)
+@AutoConfiguration
 // classpath存在HelloService才生效
 @ConditionalOnClass(HelloService.class)
 // 开启属性绑定，把HelloProperties注入容器
